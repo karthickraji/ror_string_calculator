@@ -20,4 +20,16 @@ RSpec.describe StringCalculator, "#add" do
       expect(StringCalculator.add("243, 357")).to eq(600)
     end
   end
+
+  context "If pass new lines between numbers then" do
+    it "Numbers only can be taken and added them" do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
+    end
+  end
+
+  context "If pass delimiters between numbers then" do
+    it "Numbers only can be taken and added them" do
+      expect(StringCalculator.add("//;\n1;2")).to eq(3)
+    end
+  end
 end
