@@ -6,8 +6,7 @@ module StringCalculator
   end
 
   def self.get_number_from_string(string_numbers)
-    numbers = string_numbers.split(",").map{|x| x.to_i}
-    numbers.sum
+    string_numbers.split(", ").map(&:to_i).sum
   end
 
 end
